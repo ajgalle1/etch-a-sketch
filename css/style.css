@@ -1,0 +1,29 @@
+#container{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+}
+
+/* the board */
+#sketchPad{
+    border: 25px solid orange;
+    width:500px;
+    height:400px;
+    display:flex;
+    flex-wrap:wrap;
+}
+.cell {
+    border: 1px solid black;
+    flex-grow:1;
+  }
+
+/* Slider */
+
+.rangeslider {
+    width: 50%;
+}
+
+.myslider:hover {
+    opacity: 1;
+}
