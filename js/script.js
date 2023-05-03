@@ -10,7 +10,10 @@ function drawBoard(padSize) {
         let newDiv = document.createElement("div");
             newDiv.id = "div" + i;
             newDiv.className = "cell";
-    
+        newDiv.addEventListener('mouseover', () => {
+            newDiv.classList.add("painted");
+        });
+
         sketchPad.appendChild(newDiv);
     };
 };
@@ -32,10 +35,11 @@ rangeSlider.oninput = function () {
     //remove old board
 
     let boardCellsToRemove = document.querySelectorAll(".cell");
+
     for (i = 0; i < boardCellsToRemove.length; i++) {
         boardCellsToRemove[i].remove();
     }
-
+    // draw a new board
     padSize = this.value;
 
     drawBoard(padSize);
